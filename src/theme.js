@@ -2,7 +2,7 @@
 
 export const theme = {
   bg: {
-    main: '#ffffff',
+    main: '#f2f0fd',
     header: '#ffffff',
   },
   clr: {
@@ -19,7 +19,7 @@ export const theme = {
       900: '#2d3436',
       800: '#636e72',
       300: '#b2bec3',
-      200: '#dfe6e9',
+      200: '#f2f0fd',
       100: '#ffffff',
     },
   },

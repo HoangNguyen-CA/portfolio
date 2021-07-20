@@ -13,7 +13,7 @@ const Inner = styled.div`
   min-height: calc(100vh - ${({ theme }) => theme.navbarHeight});
   display: flex;
   align-items: center;
-  padding: 0 ${({ theme }) => theme.paddingx.desktop};
+  padding: 5em ${({ theme }) => theme.paddingx.desktop};
 
   & > * + * {
     margin-left: 5em;
@@ -65,6 +65,7 @@ const ImgContainer = styled.div`
   width: auto;
   & > img {
     width: 100%;
+    display: block;
   }
   flex-grow: 1;
 `;
