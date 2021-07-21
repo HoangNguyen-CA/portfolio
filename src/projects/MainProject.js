@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { openNewPage } from './utils';
+
 import Button from '../components/Button';
 
 const Container = styled.div`
@@ -55,36 +57,31 @@ const Tag = styled.p`
   border: 1px solid ${({ theme }) => theme.clr.neutral[900]};
 `;
 
-const MainProject = ({ image, reversed }) => {
+const MainProject = ({
+  image,
+  reversed,
+  header = 'Project',
+  desc = 'This is my project.',
+  tags = [],
+  codeLink,
+  demoLink,
+}) => {
   const imageNode = (
     <ImgContainer reversed={reversed}>
       <img src={image} alt='project' />
     </ImgContainer>
   );
 
+  const tagsNode = tags.map((str) => <Tag>{str}</Tag>);
+
   const contentNode = (
     <Inner>
-      <Header>Project #1</Header>
-      <TagContainer>
-        <Tag>React</Tag> <Tag>Nodejs</Tag>
-      </TagContainer>
-      <Desc>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea tempora
-        voluptatem, non quam tenetur tempore cum placeat voluptatum modi atque
-        qui inventore, velit perferendis totam quisquam quos ipsam fuga? Atque!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea tempora
-        voluptatem, non quam tenetur tempore cum placeat voluptatum modi atque
-        qui inventore, velit perferendis totam quisquam quos ipsam fuga? Atque!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea tempora
-        voluptatem, non quam tenetur tempore cum placeat voluptatum modi atque
-        qui inventore, velit perferendis totam quisquam quos ipsam fuga? Atque!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea tempora
-        voluptatem, non quam tenetur tempore cum placeat voluptatum modi atque
-        qui inventore, velit perferendis totam quisquam quos ipsam fuga? Atque!
-      </Desc>
+      <Header>{header}</Header>
+      <TagContainer>{tagsNode}</TagContainer>
+      <Desc>{desc}</Desc>
       <ButtonContainer>
-        <Button>Code</Button>
-        <Button>Demo</Button>
+        <Button onClick={() => openNewPage(codeLink)}>Code</Button>
+        <Button onClick={() => openNewPage(demoLink)}>Demo</Button>
       </ButtonContainer>
     </Inner>
   );

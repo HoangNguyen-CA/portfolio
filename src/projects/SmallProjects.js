@@ -36,10 +36,22 @@ const SmallProjects = () => {
       <Inner>
         <Header>Static Sites</Header>
         <ProjectsContainer>
-          <SmallProject image={fyloLandingImage}></SmallProject>
-          <SmallProject image={shortlyImage}></SmallProject>
-          <SmallProject image={calculatorImage}></SmallProject>
-          <SmallProject image={fyloStorageImage}></SmallProject>
+          <SmallProject
+            image={fyloLandingImage}
+            header='Fylo Landing Page'
+          ></SmallProject>
+          <SmallProject
+            image={shortlyImage}
+            header='Url Shortener'
+          ></SmallProject>
+          <SmallProject
+            image={calculatorImage}
+            header='Javascript Calculator'
+          ></SmallProject>
+          <SmallProject
+            image={fyloStorageImage}
+            header='Fylo Storage Component'
+          ></SmallProject>
         </ProjectsContainer>
       </Inner>
     </Container>

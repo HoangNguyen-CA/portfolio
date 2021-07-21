@@ -26,7 +26,7 @@ const MainProjects = ({ reversed }) => {
     <Container>
       <Inner>
         <Header>Full-Stack Projects</Header>
-        <MainProject image={Image1}> </MainProject>
+        <MainProject image={Image1}></MainProject>
         <MainProject image={Image1} reversed></MainProject>
       </Inner>
     </Container>

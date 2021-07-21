@@ -2,8 +2,8 @@
 
 export const theme = {
   bg: {
-    main: '#f2f0fd',
-    header: '#ffffff',
+    main: '#ffffff',
+    header: '#f2f0fd',
   },
   clr: {
     primary: {
