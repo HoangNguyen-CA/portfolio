@@ -32,9 +32,9 @@ export const theme = {
 
   paddingx: {
     desktop: '10em',
-    laptop: '5em',
+    laptop: '4em',
     tablet: '4em',
-    mobile: '1em',
+    mobile: '2em',
   },
 
   navbarHeight: '80px',

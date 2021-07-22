@@ -17,6 +17,9 @@ const Inner = styled(SectionInner)`
   align-items: center;
 
   & > * + * {
+    margin: 0 0 0 5em;
+  }
+  @media ${({ theme }) => theme.breakpoints.laptop} {
     margin: 0 0 0 3em;
   }
 

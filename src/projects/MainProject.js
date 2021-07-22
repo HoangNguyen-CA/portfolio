@@ -10,12 +10,27 @@ const Container = styled.div`
   align-items: center;
 
   & > * + * {
-    margin-left: 5em;
+    margin: 0 0 0 5em;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.laptop} {
+    & > * + * {
+      margin: 0 0 0em 2em;
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    flex-direction: column;
+    
+    & > * + * {
+      margin: 2em 0 0em 0;
+    }
+  }
   }
 `;
 
 const ImgContainer = styled.div`
-  width: 50%;
+  width: 100%;
   & > img {
     width: 100%;
     display: block;
@@ -24,7 +39,7 @@ const ImgContainer = styled.div`
 `;
 
 const Inner = styled.div`
-  width: 50%;
+  width: 100%;
 `;
 
 const Header = styled.h3`
