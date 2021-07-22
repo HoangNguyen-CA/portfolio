@@ -15,15 +15,16 @@ const Container = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  width: 100%;
+  width: 50%;
   & > img {
     width: 100%;
     display: block;
   }
+  max-width: 1980px;
 `;
 
 const Inner = styled.div`
-  width: 100%;
+  width: 50%;
 `;
 
 const Header = styled.h3`
@@ -34,7 +35,10 @@ const Header = styled.h3`
   letter-spacing: 0.1em;
 `;
 const Desc = styled.p`
+  font-size: 1rem;
   margin-bottom: 2em;
+  letter-spacing: 1px;
+  line-height: 1.8em;
 `;
 
 const ButtonContainer = styled.div`
@@ -72,7 +76,7 @@ const MainProject = ({
     </ImgContainer>
   );
 
-  const tagsNode = tags.map((str) => <Tag>{str}</Tag>);
+  const tagsNode = tags.map((str) => <Tag key={str}>{str}</Tag>);
 
   const contentNode = (
     <Inner>
@@ -81,7 +85,7 @@ const MainProject = ({
       <Desc>{desc}</Desc>
       <ButtonContainer>
         <Button onClick={() => openNewPage(codeLink)}>Code</Button>
-        <Button onClick={() => openNewPage(demoLink)}>Demo</Button>
+        <Button onClick={() => openNewPage(demoLink)}>Demo (Heroku)</Button>
       </ButtonContainer>
     </Inner>
   );

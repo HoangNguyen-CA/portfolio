@@ -2,19 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import Navlinks from './Navlinks';
 
+import SectionInner from '../components/SectionInner';
+
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.bg.header};
+  background-color: ${({ theme }) => theme.clr.neutral[200]};
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 `;
 
-const Inner = styled.div`
+const Inner = styled(SectionInner)`
   display: flex;
-  margin: 0 auto;
 
   align-items: center;
   justify-content: space-between;
   height: ${({ theme }) => theme.navbarHeight};
   max-width: ${({ theme }) => theme.maxWidth};
-  padding: 0 ${({ theme }) => theme.paddingx.desktop};
 `;
 
 const Logo = styled.p`
@@ -27,7 +31,7 @@ const Logo = styled.p`
 const Navbar = () => {
   return (
     <Container>
-      <Inner>
+      <Inner paddingy='0'>
         <Logo>HN</Logo>
         <Navlinks />
       </Inner>

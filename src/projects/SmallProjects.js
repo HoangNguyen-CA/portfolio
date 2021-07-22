@@ -8,18 +8,17 @@ import fyloStorageImage from '../images/projects/fylo-storage-component.jpg';
 import calculatorImage from '../images/projects/calculator.jpg';
 import shortlyImage from '../images/projects/shortly.jpg';
 
+import SectionInner from '../components/SectionInner';
+
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bg.main};
 `;
 
-const Inner = styled.div`
-  max-width: ${({ theme }) => theme.maxWidth};
-  margin: 0 auto;
-  padding: 5em ${({ theme }) => theme.paddingx.desktop};
+const Inner = styled(SectionInner)`
   color: ${({ theme }) => theme.clr.neutral[900]};
 
   & > * + * {
-    margin-top: 3em;
+    margin-top: 5em;
   }
 `;
 
@@ -27,7 +26,7 @@ const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  gap: 2em;
+  gap: 3em;
 `;
 
 const SmallProjects = () => {

@@ -4,16 +4,15 @@ import styled from 'styled-components';
 import Header from '../components/SectionHeader';
 import MainProject from './MainProject';
 
-import Image1 from '../images/cover.svg';
+import { recipeAppInfo } from './ProjectInfo';
+
+import SectionInner from '../components/SectionInner';
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bg.main};
 `;
 
-const Inner = styled.div`
-  max-width: ${({ theme }) => theme.maxWidth};
-  margin: 0 auto;
-  padding: 5em ${({ theme }) => theme.paddingx.desktop};
+const Inner = styled(SectionInner)`
   color: ${({ theme }) => theme.clr.neutral[900]};
 
   & > * + * {
@@ -26,8 +25,7 @@ const MainProjects = ({ reversed }) => {
     <Container>
       <Inner>
         <Header>Full-Stack Projects</Header>
-        <MainProject image={Image1}></MainProject>
-        <MainProject image={Image1} reversed></MainProject>
+        <MainProject {...recipeAppInfo}></MainProject>
       </Inner>
     </Container>
   );

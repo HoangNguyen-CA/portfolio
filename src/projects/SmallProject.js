@@ -11,8 +11,9 @@ const Container = styled.div`
   height: max-content;
 
   overflow: hidden;
-  border: 2px solid ${({ theme }) => theme.clr.neutral[800]};
-  box-shadow: 5px 5px ${({ theme }) => theme.clr.neutral[900]};
+  /*border: 2px solid ${({ theme }) => theme.clr.neutral[800]};*/
+  box-shadow: 0 20px 30px 0 ${({ theme }) => theme.clr.neutral[900]}44;
+  border-radius: 10px;
 
   width: 100%;
 
@@ -74,7 +75,7 @@ const SmallProject = ({ image, header = 'Project', codeLink, demoLink }) => {
         <Header>{header}</Header>
         <ButtonContainer>
           <Button onClick={() => openNewPage(codeLink)}>Code</Button>
-          <Button onDemo={() => openNewPage(demoLink)}>Demo</Button>
+          <Button onClick={() => openNewPage(demoLink)}>Demo</Button>
         </ButtonContainer>
       </Overlay>
       <ImgContainer>

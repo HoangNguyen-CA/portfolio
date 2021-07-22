@@ -24,8 +24,17 @@ export const theme = {
     },
   },
 
+  breakpoints: {
+    laptop: '(max-width: 1440px)',
+    tablet: '(max-width: 900px)',
+    mobile: '(max-width: 600px)',
+  },
+
   paddingx: {
     desktop: '10em',
+    laptop: '5em',
+    tablet: '4em',
+    mobile: '1em',
   },
 
   navbarHeight: '80px',
