@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from '../components/SectionHeader';
-import MainProject from './MainProject';
 
-import { recipeAppInfo } from './ProjectInfo';
+import { MainProjectItems } from './ProjectInfo';
 
 import SectionInner from '../components/SectionInner';
 
@@ -25,7 +24,7 @@ const MainProjects = ({ reversed }) => {
     <Container>
       <Inner>
         <Header>Full-Stack Projects</Header>
-        <MainProject {...recipeAppInfo}></MainProject>
+        {MainProjectItems}
       </Inner>
     </Container>
   );

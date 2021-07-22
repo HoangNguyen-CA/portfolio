@@ -2,11 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from '../components/SectionHeader';
-import SmallProject from './SmallProject';
-import fyloLandingImage from '../images/projects/fylo-landing-page.jpg';
-import fyloStorageImage from '../images/projects/fylo-storage-component.jpg';
-import calculatorImage from '../images/projects/calculator.jpg';
-import shortlyImage from '../images/projects/shortly.jpg';
+import { SmallProjectItems } from './ProjectInfo';
 
 import SectionInner from '../components/SectionInner';
 
@@ -42,24 +38,7 @@ const SmallProjects = () => {
     <Container>
       <Inner>
         <Header>Static Sites</Header>
-        <ProjectsContainer>
-          <SmallProject
-            image={fyloLandingImage}
-            header='Fylo Landing Page'
-          ></SmallProject>
-          <SmallProject
-            image={shortlyImage}
-            header='Url Shortener'
-          ></SmallProject>
-          <SmallProject
-            image={calculatorImage}
-            header='Javascript Calculator'
-          ></SmallProject>
-          <SmallProject
-            image={fyloStorageImage}
-            header='Fylo Storage Component'
-          ></SmallProject>
-        </ProjectsContainer>
+        <ProjectsContainer>{SmallProjectItems}</ProjectsContainer>
       </Inner>
     </Container>
   );
