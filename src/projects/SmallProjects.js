@@ -27,6 +27,14 @@ const ProjectsContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 3em;
+
+  @media ${({ theme }) => theme.breakpoints.laptop} {
+    gap: 2em;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const SmallProjects = () => {

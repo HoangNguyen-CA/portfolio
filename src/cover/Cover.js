@@ -8,7 +8,6 @@ import SectionInner from '../components/SectionInner';
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bg.header};
-  overflow: hidden;
 `;
 
 const Inner = styled(SectionInner)`
@@ -20,7 +19,9 @@ const Inner = styled(SectionInner)`
     margin: 0 0 0 5em;
   }
   @media ${({ theme }) => theme.breakpoints.laptop} {
-    margin: 0 0 0 3em;
+    & > * + * {
+      margin: 0 0 0 5em;
+    }
   }
 
   @media ${({ theme }) => theme.breakpoints.tablet} {

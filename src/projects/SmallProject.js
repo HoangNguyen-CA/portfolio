@@ -58,6 +58,11 @@ const Overlay = styled.div`
 
 const Header = styled.h3`
   font-size: 2.5rem;
+  font-weight: 500;
+
+  @media ${({ theme }) => theme.breakpoints.laptop} {
+    font-size: 2rem;
+  }
 `;
 
 const ButtonContainer = styled.div`

@@ -21,11 +21,10 @@ const Container = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
     flex-direction: column;
-    
+
     & > * + * {
       margin: 2em 0 0em 0;
     }
-  }
   }
 `;
 
@@ -46,9 +45,9 @@ const Header = styled.h3`
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 0.5em;
-
   letter-spacing: 0.1em;
 `;
+
 const Desc = styled.p`
   font-size: 1rem;
   margin-bottom: 2em;
