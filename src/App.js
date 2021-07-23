@@ -2,6 +2,7 @@ import Cover from './cover/Cover';
 import Navbar from './navbar/Navbar';
 import MainProjects from './projects/MainProjects';
 import SmallProjects from './projects/SmallProjects';
+import Contact from './contact/Contact';
 import GlobalStyle from './globalStyles';
 
 import { ThemeProvider } from 'styled-components';
@@ -15,6 +16,7 @@ function App() {
       <Cover />
       <MainProjects />
       <SmallProjects />
+      <Contact />
     </ThemeProvider>
   );
 }

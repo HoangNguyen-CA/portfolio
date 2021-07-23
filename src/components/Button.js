@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-const Button = styled.button.attrs({ type: 'button' })`
+const Button = styled.button.attrs((props) => ({
+  type: props.form ? 'submit' : 'button',
+  width: props.form ? '100%' : 'auto',
+}))`
   font-size: 1rem;
+  width: ${(props) => props.width};
 
   border: none;
   background-color: ${({ theme }) => theme.clr.primary[500]};
