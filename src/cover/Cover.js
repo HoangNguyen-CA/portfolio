@@ -41,7 +41,7 @@ const Inner = styled(SectionInner)`
 `;
 
 const LeftContainer = styled.div`
-  width: min(max-content, 100%);
+  width: min-content;
   color: ${({ theme }) => theme.clr.neutral[900]};
 `;
 
@@ -51,7 +51,6 @@ const Header = styled.h1`
   font-weight: 300;
   letter-spacing: 0.15em;
   margin-bottom: 0em;
-
   min-width: max-content;
 
   position: relative;
@@ -90,6 +89,7 @@ const SubHeader = styled.h2`
 `;
 
 const Tag = styled.p`
+  width: 100%;
   font-size: 1.5rem;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -144,8 +144,9 @@ const Cover = () => {
           <SubHeader>Hi, I'm </SubHeader>
           <Header>Hoang Nguyen</Header>
           <Tag>
-            Software developer based in Toronto, Canada. I love making beautiful
-            websites. I am a very fast learner.
+            I am a software developer based in Toronto, Canada. I love making
+            beautiful & responsive websites/web applications. Have a look at my
+            projects below to see what I can do.
           </Tag>
           <IconContainer>
             <FaGithub
