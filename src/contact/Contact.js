@@ -64,7 +64,7 @@ const Contact = () => {
     <div>
       <Inner>
         <SectionHeader>Contact</SectionHeader>
-        <Form>
+        <Form name='contact' method='post'>
           <input type='hidden' name='form-name' value='contact' />
 
           <Label>
