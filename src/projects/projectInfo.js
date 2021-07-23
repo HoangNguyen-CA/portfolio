@@ -20,16 +20,36 @@ const MainProjectsList = [
 ];
 
 export const MainProjectItems = MainProjectsList.map((params) => (
-  <MainProject {...params}></MainProject>
+  <MainProject {...params} key={params.header}></MainProject>
 ));
 
 const SmallProjectsList = [
-  { image: fyloLandingImage, header: 'Fylo Landing Page' },
-  { image: shortlyImage, header: 'Url Shortener' },
-  { image: calculatorImage, header: 'Javascript Calculator' },
-  { image: fyloStorageImage, header: 'Fylo Storage Component' },
+  {
+    image: fyloLandingImage,
+    header: 'Fylo Landing Page',
+    codeLink: 'https://github.com/HoangNguyen-CA/fylo-dark-theme-landing-page',
+    demoLink: 'https://hoangnguyen-fylo-dark-theme.netlify.app/',
+  },
+  {
+    image: shortlyImage,
+    header: 'Url Shortener',
+    codeLink: 'https://github.com/HoangNguyen-CA/url-shortener',
+    demoLink: 'https://hoangnguyen-url-shortener.netlify.app/',
+  },
+  {
+    image: calculatorImage,
+    header: 'Javascript Calculator',
+    codeLink: 'https://github.com/HoangNguyen-CA/react-calculator-app',
+    demoLink: 'https://hoangnguyen-react-calculator.netlify.app/',
+  },
+  {
+    image: fyloStorageImage,
+    header: 'Fylo Storage Component',
+    codeLink: 'https://github.com/HoangNguyen-CA/fylo-data-storage-component',
+    demoLink: 'https://hoangnguyen-fylo-storage.netlify.app/',
+  },
 ];
 
 export const SmallProjectItems = SmallProjectsList.map((params) => (
-  <SmallProject {...params}></SmallProject>
+  <SmallProject {...params} key={params.header}></SmallProject>
 ));

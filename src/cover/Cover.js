@@ -100,6 +100,7 @@ const ImgContainer = styled.div`
   height: max-content;
   & > img {
     width: 100%;
+    height: auto;
     display: block;
   }
   flex-grow: 1 0;
@@ -121,7 +122,12 @@ const Cover = () => {
           <Button>See My Work</Button>
         </LeftContainer>
         <ImgContainer>
-          <img src={illustration} alt='web developer sitting on desk' />
+          <img
+            src={illustration}
+            alt='web developer sitting on desk'
+            width='557'
+            height='300'
+          />
         </ImgContainer>
       </Inner>
     </Container>

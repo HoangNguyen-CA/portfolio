@@ -32,6 +32,7 @@ const ImgContainer = styled.div`
   width: 100%;
   & > img {
     width: 100%;
+    height: auto;
     display: block;
   }
   max-width: 1980px;
@@ -86,7 +87,7 @@ const MainProject = ({
 }) => {
   const imageNode = (
     <ImgContainer reversed={reversed}>
-      <img src={image} alt='project' />
+      <img src={image} alt='project' width='1920' height='1080' />
     </ImgContainer>
   );
 

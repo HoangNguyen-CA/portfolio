@@ -28,6 +28,7 @@ const ImgContainer = styled.div`
   & > img {
     width: 100%;
     display: block;
+    height: auto;
   }
 `;
 
@@ -84,7 +85,7 @@ const SmallProject = ({ image, header = 'Project', codeLink, demoLink }) => {
         </ButtonContainer>
       </Overlay>
       <ImgContainer>
-        <img src={image} alt='Project'></img>
+        <img src={image} alt='Project' width='900' height='660'></img>
       </ImgContainer>
     </Container>
   );
