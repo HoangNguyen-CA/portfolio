@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Button from '../components/Button';
 
-import { openNewPage } from './utils';
+import { openNewPage } from '../utils';
 
 const Container = styled.div`
   background-size: 100% 100%;
@@ -80,8 +80,8 @@ const SmallProject = ({ image, header = 'Project', codeLink, demoLink }) => {
       <Overlay>
         <Header>{header}</Header>
         <ButtonContainer>
-          <Button onClick={() => openNewPage(codeLink)}>Code</Button>
-          <Button onClick={() => openNewPage(demoLink)}>Demo</Button>
+          <Button onClick={openNewPage(codeLink)}>Code</Button>
+          <Button onClick={openNewPage(demoLink)}>Demo</Button>
         </ButtonContainer>
       </Overlay>
       <ImgContainer>

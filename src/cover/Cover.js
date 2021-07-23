@@ -6,6 +6,11 @@ import Button from '../components/Button';
 import illustration from '../images/cover.svg';
 import SectionInner from '../components/SectionInner';
 
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { openNewPage } from '../utils';
+
+import { scroller } from 'react-scroll';
+
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bg.header};
 `;
@@ -87,12 +92,20 @@ const SubHeader = styled.h2`
 const Tag = styled.p`
   font-size: 1.5rem;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   @media ${({ theme }) => theme.breakpoints.laptop} {
     font-size: 1.3rem;
   }
   @media ${({ theme }) => theme.breakpoints.tablet} {
     font-size: 1.1rem;
+  }
+`;
+
+const IconContainer = styled.div`
+  margin-bottom: 1em;
+
+  & > * + * {
+    margin-left: 15px;
   }
 `;
 
@@ -112,14 +125,42 @@ const ImgContainer = styled.div`
 `;
 
 const Cover = () => {
+  const openMail = () => {
+    const subject = 'hoang.viet.nguyen';
+    const mail = '@outlook.com';
+    window.location.href = `mailto:${subject}${mail}`;
+  };
+
+  const handleProjects = () => {
+    scroller.scrollTo('mainProjects', {
+      duration: 1000,
+      smooth: true,
+    });
+  };
   return (
-    <Container>
+    <Container name='cover'>
       <Inner>
         <LeftContainer>
           <SubHeader>Hi, I'm </SubHeader>
           <Header>Hoang Nguyen</Header>
-          <Tag>Software developer based in Toronto, Canada.</Tag>
-          <Button>See My Work</Button>
+          <Tag>
+            Software developer based in Toronto, Canada. I love making beautiful
+            websites. I am a very fast learner.
+          </Tag>
+          <IconContainer>
+            <FaGithub
+              className='icon'
+              onClick={openNewPage('https://github.com/HoangNguyen-CA')}
+            />
+            <FaLinkedin
+              className='icon'
+              onClick={openNewPage(
+                'https://www.linkedin.com/in/hoang-nguyen-a36636196/'
+              )}
+            />
+            <FaEnvelope onClick={openMail} className='icon' />
+          </IconContainer>
+          <Button onClick={handleProjects}>See My Work</Button>
         </LeftContainer>
         <ImgContainer>
           <img

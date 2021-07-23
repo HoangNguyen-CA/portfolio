@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navlinks from './Navlinks';
 
 import SectionInner from '../components/SectionInner';
+import { Link } from 'react-scroll';
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.clr.neutral[200]};
@@ -21,7 +22,12 @@ const Inner = styled(SectionInner)`
   max-width: ${({ theme }) => theme.maxWidth};
 `;
 
-const Logo = styled.p`
+const Logo = styled(Link).attrs((props) => ({
+  activeClass: '',
+  to: 'cover',
+  smooth: true,
+  duration: 1000,
+}))`
   color: ${({ theme }) => theme.clr.primary[900]};
   font-size: 2rem;
   font-weight: 700;

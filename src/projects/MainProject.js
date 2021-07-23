@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { openNewPage } from './utils';
+import { openNewPage } from '../utils';
 
 import Button from '../components/Button';
 
@@ -99,8 +99,8 @@ const MainProject = ({
       <TagContainer>{tagsNode}</TagContainer>
       <Desc>{desc}</Desc>
       <ButtonContainer>
-        <Button onClick={() => openNewPage(codeLink)}>Code</Button>
-        <Button onClick={() => openNewPage(demoLink)}>Demo (Heroku)</Button>
+        <Button onClick={openNewPage(codeLink)}>Code</Button>
+        <Button onClick={openNewPage(demoLink)}>Demo (Heroku)</Button>
       </ButtonContainer>
     </Inner>
   );

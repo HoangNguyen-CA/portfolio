@@ -17,8 +17,8 @@ const Button = styled.button.attrs({ type: 'button' })`
   &:hover {
   }
   &:active {
-    transform: translateY(2px);
-    box-shadow: 0 5px ${({ theme }) => theme.clr.primary[900]};
+    transform: translateY(7px);
+    box-shadow: 0px 0px ${({ theme }) => theme.clr.primary[900]};
   }
 `;
 

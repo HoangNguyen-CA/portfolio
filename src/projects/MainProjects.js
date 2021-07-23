@@ -21,7 +21,7 @@ const Inner = styled(SectionInner)`
 
 const MainProjects = ({ reversed }) => {
   return (
-    <Container>
+    <Container name='mainProjects'>
       <Inner>
         <Header>Full-Stack Projects</Header>
         {MainProjectItems}

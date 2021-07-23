@@ -1,6 +1,12 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
-const Link = styled.button`
+const StyledLink = styled(Link).attrs((props) => ({
+  activeClass: '',
+  to: props.to,
+  smooth: true,
+  duration: 1000,
+}))`
   font-size: 1rem;
   font-weight: 600;
 
@@ -33,4 +39,4 @@ const Link = styled.button`
   }
 `;
 
-export default Link;
+export default StyledLink;

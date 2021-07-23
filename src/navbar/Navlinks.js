@@ -12,7 +12,7 @@ const Container = styled.div`
 const Navlinks = () => {
   return (
     <Container>
-      <Link>Projects</Link>
+      <Link to='mainProjects'>Projects</Link>
       <Link>Contact</Link>
     </Container>
   );
