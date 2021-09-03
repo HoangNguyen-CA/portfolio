@@ -2,6 +2,7 @@ import MainProject from './MainProject';
 import SmallProject from './SmallProject';
 
 import recipeAppImage from '../images/projects/recipe.png';
+import socialMediaAppImage from '../images/projects/social-media.png';
 
 import fyloLandingImage from '../images/projects/fylo-landing-page.jpg';
 import fyloStorageImage from '../images/projects/fylo-storage-component.jpg';
@@ -10,17 +11,29 @@ import shortlyImage from '../images/projects/shortly.jpg';
 
 const MainProjectsList = [
   {
+    header: 'Social Media App',
+    image: socialMediaAppImage,
+    tags: ['React', 'Redux', 'Nodejs', 'Express', 'MongoDB', 'API'],
+    desc: 'A social media app.',
+    demoLink: 'https://hoang-nguyen-twitter.herokuapp.com/',
+    codeLink: 'https://github.com/HoangNguyen-CA/social-media-app',
+  },
+  {
     header: 'Recipe App',
     image: recipeAppImage,
-    tags: ['React', 'Redux', 'Nodejs', 'Express', 'MongoDB', 'API'],
+    tags: ['React', 'Redux', 'Nodejs', 'Express', 'MongoDB', 'Edamam API'],
     desc: 'An application that uses a third-party API to fetch information about recipes. The frontend uses form generation & validation made from scratch. User authentication/authorization is implemented using json web tokens. Users can save favorite recipes for future reference.',
     demoLink: 'https://hoangnguyen-recipe-app.herokuapp.com/',
     codeLink: 'https://github.com/HoangNguyen-CA/cooking-recipe-app',
   },
 ];
 
-export const MainProjectItems = MainProjectsList.map((params) => (
-  <MainProject {...params} key={params.header}></MainProject>
+export const MainProjectItems = MainProjectsList.map((params, index) => (
+  <MainProject
+    {...params}
+    key={params.header}
+    reversed={index % 2 === 1}
+  ></MainProject>
 ));
 
 const SmallProjectsList = [

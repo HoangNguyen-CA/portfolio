@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navlinks from './Navlinks';
 
-import SectionInner from '../components/SectionInner';
+import SectionInner from '../components/Section/SectionInner';
 import { Link } from 'react-scroll';
 
 const Container = styled.div`

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../components/SectionHeader';
+import Header from '../components/Section/SectionHeader';
 import { SmallProjectItems } from './projectInfo';
 
-import SectionInner from '../components/SectionInner';
+import SectionInner from '../components/Section/SectionInner';
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bg.main};

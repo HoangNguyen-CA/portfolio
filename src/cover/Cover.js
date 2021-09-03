@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from '../components/Button';
 
 import illustration from '../images/cover.svg';
-import SectionInner from '../components/SectionInner';
+import SectionInner from '../components/Section/SectionInner';
 
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { openNewPage } from '../utils';

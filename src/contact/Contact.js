@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import SectionInner from '../components/SectionInner';
-import SectionHeader from '../components/SectionHeader';
+import SectionInner from '../components/Section/SectionInner';
+import SectionHeader from '../components/Section/SectionHeader';
 import Button from '../components/Button';
 
 const Input = styled.input`
