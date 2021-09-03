@@ -139,7 +139,7 @@ const Cover = () => {
   };
   return (
     <Container name='cover'>
-      <Inner>
+      <Inner gap='0'>
         <LeftContainer>
           <SubHeader>Hi, I'm </SubHeader>
           <Header>Hoang Nguyen</Header>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const Button = styled.button.attrs((props) => ({
-  type: props.form ? 'submit' : 'button',
-  width: props.form ? '100%' : 'auto',
+  type: props.$form ? 'submit' : 'button',
+  width: props.$form ? '100%' : 'auto',
 }))`
   font-size: 1rem;
   width: ${(props) => props.width};

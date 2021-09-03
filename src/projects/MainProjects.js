@@ -1,32 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../components/Section/SectionHeader';
-
 import { MainProjectItems } from './projectInfo';
 
-import SectionInner from '../components/Section/SectionInner';
+import SectionLayout from '../components/Section/SectionLayout';
 
-const Container = styled.div`
+const Layout = styled(SectionLayout)`
   background-color: ${({ theme }) => theme.bg.main};
-`;
-
-const Inner = styled(SectionInner)`
   color: ${({ theme }) => theme.clr.neutral[900]};
-
-  & > * + * {
-    margin-top: 4em;
-  }
 `;
 
-const MainProjects = ({ reversed }) => {
+const MainProjects = () => {
   return (
-    <Container name='mainProjects'>
-      <Inner>
-        <Header>Full-Stack Projects</Header>
-        {MainProjectItems}
-      </Inner>
-    </Container>
+    <Layout header='Full Stack Projects' name='mainProjects'>
+      {MainProjectItems}
+    </Layout>
   );
 };
 

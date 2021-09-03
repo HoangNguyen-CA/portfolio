@@ -1,21 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../components/Section/SectionHeader';
 import { SmallProjectItems } from './projectInfo';
 
-import SectionInner from '../components/Section/SectionInner';
+import SectionLayout from '../components/Section/SectionLayout';
 
-const Container = styled.div`
+const Layout = styled(SectionLayout)`
   background-color: ${({ theme }) => theme.bg.main};
-`;
-
-const Inner = styled(SectionInner)`
-  color: ${({ theme }) => theme.clr.neutral[900]};
-
-  & > * + * {
-    margin-top: 5em;
-  }
 `;
 
 const ProjectsContainer = styled.div`
@@ -35,12 +26,9 @@ const ProjectsContainer = styled.div`
 
 const SmallProjects = () => {
   return (
-    <Container>
-      <Inner>
-        <Header>Static Sites</Header>
-        <ProjectsContainer>{SmallProjectItems}</ProjectsContainer>
-      </Inner>
-    </Container>
+    <Layout header='Static Sites'>
+      <ProjectsContainer>{SmallProjectItems}</ProjectsContainer>
+    </Layout>
   );
 };
 

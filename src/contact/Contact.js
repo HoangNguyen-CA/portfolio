@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import SectionInner from '../components/Section/SectionInner';
-import SectionHeader from '../components/Section/SectionHeader';
+
+import SectionLayout from '../components/Section/SectionLayout';
 import Button from '../components/Button';
+
+const Layout = styled(SectionLayout)`
+  background-color: ${({ theme }) => theme.bg.main};
+`;
 
 const Input = styled.input`
   font-size: 1rem;
@@ -52,37 +56,27 @@ const Form = styled.form`
   }
 `;
 
-const Inner = styled(SectionInner)`
-  color: ${({ theme }) => theme.clr.neutral[900]};
-
-  & > * + * {
-    margin-top: 2em;
-  }
-`;
 const Contact = () => {
   return (
-    <div>
-      <Inner>
-        <SectionHeader>Contact</SectionHeader>
-        <Form name='contact' method='post'>
-          <input type='hidden' name='form-name' value='contact' />
+    <Layout header='Contact'>
+      <Form name='contact' method='post'>
+        <input type='hidden' name='form-name' value='contact' />
 
-          <Label>
-            Email:
-            <Input name='email' type='text' />
-          </Label>
-          <Label>
-            Subject:
-            <Input name='subject' type='text' />
-          </Label>
-          <Label>
-            Message:
-            <TextArea name='message' type='text' />
-          </Label>
-          <Button form>Submit</Button>
-        </Form>
-      </Inner>
-    </div>
+        <Label>
+          Email:
+          <Input name='email' type='text' />
+        </Label>
+        <Label>
+          Subject:
+          <Input name='subject' type='text' />
+        </Label>
+        <Label>
+          Message:
+          <TextArea name='message' type='text' />
+        </Label>
+        <Button $form>Submit</Button>
+      </Form>
+    </Layout>
   );
 };
 

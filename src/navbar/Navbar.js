@@ -37,7 +37,7 @@ const Logo = styled(Link).attrs((props) => ({
 const Navbar = () => {
   return (
     <Container>
-      <Inner paddingy='0'>
+      <Inner paddingy='0' gap='0'>
         <Logo>HN</Logo>
         <Navlinks />
       </Inner>
