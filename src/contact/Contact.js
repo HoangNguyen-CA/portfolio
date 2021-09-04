@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import SectionLayout from '../components/Section/SectionLayout';
 import Button from '../components/Button';
@@ -8,27 +8,35 @@ const Layout = styled(SectionLayout)`
   background-color: ${({ theme }) => theme.bg.main};
 `;
 
-const Input = styled.input`
+const inputStyles = css`
   font-size: 1rem;
-  display: block;
   width: 100%;
-  padding: 0.6em;
+  display: block;
+  padding: 0.7em;
+  border-radius: 3px;
 
+  outline: 0;
+  border: 2px solid ${({ theme }) => theme.clr.neutral[300]};
   color: ${({ theme }) => theme.clr.neutral[900]};
-  font-family: 'Open Sans', sans-serif;
+
+  &:focus {
+    border: 2px solid ${({ theme }) => theme.clr.primary[500]};
+  }
+`;
+
+const Input = styled.input`
+  font-family: inherit;
+
+  ${inputStyles}
 `;
 
 const TextArea = styled.textarea`
-  font-size: 1rem;
-  display: block;
-  width: 100%;
   height: 10em;
-  padding: 0.6em;
 
-  color: ${({ theme }) => theme.clr.neutral[900]};
-  font-family: 'Open Sans', sans-serif;
+  font-family: inherit;
 
   resize: none;
+  ${inputStyles}
 `;
 
 const Label = styled.label`

@@ -37,6 +37,6 @@ export const theme = {
     mobile: '2em',
   },
 
-  navbarHeight: '80px',
+  navbarHeight: '70px',
   maxWidth: '2000px',
 };

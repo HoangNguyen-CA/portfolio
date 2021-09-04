@@ -29,7 +29,7 @@ const Logo = styled(Link).attrs((props) => ({
   duration: 1000,
 }))`
   color: ${({ theme }) => theme.clr.primary[900]};
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   cursor: pointer;
 `;
