@@ -43,8 +43,8 @@ const Inner = styled(SectionInner)`
 `;
 
 const LeftContainer = styled.div`
-  width: min-content;
   color: ${({ theme }) => theme.clr.neutral[900]};
+  width: min-content;
 `;
 
 const Header = styled.h1`

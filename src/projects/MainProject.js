@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { openNewPage } from '../utils';
 
@@ -9,21 +9,29 @@ const Container = styled.div`
   display: flex;
   align-items: center;
 
-  & > * + * {
-    margin: 0 0 0 5em;
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    flex-direction: column;
   }
+`;
+
+const normalStyles = css`
+  margin: 0 5em 0 0;
+  order: -1;
 
   @media ${({ theme }) => theme.breakpoints.laptop} {
     & > * + * {
-      margin: 0 0 0em 2em;
+      margin: 0 2em 0 0;
     }
   }
+`;
 
-  @media ${({ theme }) => theme.breakpoints.tablet} {
-    flex-direction: column;
+const reversedStyles = css`
+  margin: 0 0 0 5em;
+  order: 1;
 
+  @media ${({ theme }) => theme.breakpoints.laptop} {
     & > * + * {
-      margin: 2em 0 0em 0;
+      margin: 0 0 0 2em;
     }
   }
 `;
@@ -36,6 +44,13 @@ const ImgContainer = styled.div`
     display: block;
   }
   max-width: 1980px;
+
+  ${(props) => (props.reversed ? reversedStyles : normalStyles)};
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    margin: 3em 0 0 0;
+    order: 1;
+  }
 `;
 
 const Inner = styled.div`
@@ -105,23 +120,12 @@ const MainProject = ({
     </Inner>
   );
 
-  let content;
-  if (reversed) {
-    content = (
-      <>
-        {contentNode}
-        {imageNode}
-      </>
-    );
-  } else {
-    content = (
-      <>
-        {imageNode}
-        {contentNode}
-      </>
-    );
-  }
-  return <Container>{content}</Container>;
+  return (
+    <Container>
+      {contentNode}
+      {imageNode}
+    </Container>
+  );
 };
 
 export default MainProject;

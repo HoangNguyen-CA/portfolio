@@ -19,6 +19,8 @@ const Button = styled.button.attrs((props) => ({
   transition: 0.05s ease-out;
 
   &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px ${({ theme }) => theme.clr.primary[900]};
   }
   &:active {
     transform: translateY(7px);

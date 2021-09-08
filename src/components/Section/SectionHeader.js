@@ -7,7 +7,7 @@ const Header = styled.h2`
   letter-spacing: 0.1em;
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 `;
 

@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
 :root{
     font-size: 110%;
+    color: ${({ theme }) => theme.clr.neutral[900]}
 }
 
 @media ${({ theme }) => theme.breakpoints.laptop}{
