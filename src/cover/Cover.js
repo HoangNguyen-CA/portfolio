@@ -16,9 +16,11 @@ const Container = styled.div`
 `;
 
 const Inner = styled(SectionInner)`
-  min-height: 100vh;
+  min-height: calc(100vh - ${({ theme }) => theme.navbarHeight});
   display: flex;
   align-items: center;
+  padding-top: 3em;
+  padding-bottom: 5em;
 
   & > * + * {
     margin: 0 0 0 5em;

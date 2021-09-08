@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.clr.neutral[200]};
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 100;
   top: 0;

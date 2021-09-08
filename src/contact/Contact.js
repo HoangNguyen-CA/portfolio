@@ -13,14 +13,15 @@ const inputStyles = css`
   width: 100%;
   display: block;
   padding: 0.7em;
-  border-radius: 3px;
 
   outline: 0;
-  border: 2px solid ${({ theme }) => theme.clr.neutral[300]};
+  border: 2px solid transparent;
+
+  background-color: ${({ theme }) => theme.clr.neutral[200]};
   color: ${({ theme }) => theme.clr.neutral[900]};
 
   &:focus {
-    border: 2px solid ${({ theme }) => theme.clr.primary[500]};
+    border-bottom: 2px solid ${({ theme }) => theme.clr.primary[500]};
   }
 `;
 
@@ -31,7 +32,7 @@ const Input = styled.input`
 `;
 
 const TextArea = styled.textarea`
-  height: 10em;
+  height: 12em;
 
   font-family: inherit;
 
@@ -82,7 +83,7 @@ const Contact = () => {
           Message:
           <TextArea name='message' type='text' />
         </Label>
-        <Button $form>Submit</Button>
+        <Button $form>Send</Button>
       </Form>
     </Layout>
   );
