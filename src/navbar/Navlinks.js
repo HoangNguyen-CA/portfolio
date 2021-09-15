@@ -13,6 +13,7 @@ const Navlinks = () => {
   return (
     <Container>
       <Link to='mainProjects'>Projects</Link>
+      <Link to='contactSection'>Contact</Link>
     </Container>
   );
 };

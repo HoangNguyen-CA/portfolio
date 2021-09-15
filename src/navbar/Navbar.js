@@ -46,7 +46,6 @@ const Navbar = () => {
   const navRef = useRef();
   const [active, setActive] = useState();
 
-  console.log(active);
   const onScroll = () => {
     if (window.scrollY > navRef.current.offsetHeight + 50) {
       setActive(true);

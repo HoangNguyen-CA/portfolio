@@ -67,7 +67,7 @@ const Form = styled.form`
 
 const Contact = () => {
   return (
-    <Layout header='Contact'>
+    <Layout header='Contact' name='contactSection'>
       <Form name='contact' method='post'>
         <input type='hidden' name='form-name' value='contact' />
 
