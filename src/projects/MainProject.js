@@ -44,6 +44,7 @@ const ImgContainer = styled.div`
     display: block;
   }
   max-width: 1980px;
+  box-shadow: 0 0 15px 2px ${({ theme }) => theme.clr.neutral[900]}33;
 
   ${(props) => (props.reversed ? reversedStyles : normalStyles)};
 
