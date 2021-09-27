@@ -22,7 +22,7 @@ const MainProjectsList = [
       'react-testing-library',
       'JWT authentication',
     ],
-    desc: `An application made to mimic the basic CRUD operations and design of Twitter.com. Only the design was taken from Twitter; backend and frontend code was written entirely from scratch. The app has a variety of features you would expect from a social-media site including user authentication/authorization; create, like, and delete posts; follow users and more. The code is written with maintainability in mind since I plan to add new features in the future. The app utilizes React testing Library for unit and integration tests.`,
+    desc: `An application made to mimic Twitter; only the design was taken from Twitter. Backend and frontend code was written entirely from scratch. The app has features you would expect from a social-media site including user authentication/authorization and CRUD operations. The code is written with maintainability in mind since this will be a long-term project. The app utilizes React Testing Library for unit and integration tests.`,
     demoLink: 'https://hoang-nguyen-twitter.herokuapp.com/',
     codeLink: 'https://github.com/HoangNguyen-CA/social-media-app',
   },

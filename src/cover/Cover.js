@@ -131,7 +131,7 @@ const Cover = () => {
           <Header>Hoang Nguyen</Header>
           <Tag>
             I am a software developer based in Toronto, Canada. I love making
-            beautiful & responsive websites/web applications. Have a look at my
+            beautiful & responsive websites/applications. Have a look at my
             projects below to see what I can do.
           </Tag>
           <ContactIcons />
