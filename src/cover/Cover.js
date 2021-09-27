@@ -5,9 +5,7 @@ import Button from '../components/Button';
 
 import illustration from '../images/cover.svg';
 import SectionInner from '../components/Section/SectionInner';
-
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { openNewPage } from '../utils';
+import ContactIcons from '../components/ContactIcons';
 
 import { scroller } from 'react-scroll';
 
@@ -103,14 +101,6 @@ const Tag = styled.p`
   }
 `;
 
-const IconContainer = styled.div`
-  margin-bottom: 1em;
-
-  & > * + * {
-    margin-left: 15px;
-  }
-`;
-
 const ImgContainer = styled.div`
   height: max-content;
   & > img {
@@ -127,12 +117,6 @@ const ImgContainer = styled.div`
 `;
 
 const Cover = () => {
-  const openMail = () => {
-    const subject = 'hoang.viet.nguyen';
-    const mail = '@outlook.com';
-    window.location.href = `mailto:${subject}${mail}`;
-  };
-
   const handleProjects = () => {
     scroller.scrollTo('mainProjects', {
       duration: 1000,
@@ -150,19 +134,7 @@ const Cover = () => {
             beautiful & responsive websites/web applications. Have a look at my
             projects below to see what I can do.
           </Tag>
-          <IconContainer>
-            <FaGithub
-              className='icon'
-              onClick={openNewPage('https://github.com/HoangNguyen-CA')}
-            />
-            <FaLinkedin
-              className='icon'
-              onClick={openNewPage(
-                'https://www.linkedin.com/in/hoang-nguyen-a36636196/'
-              )}
-            />
-            <FaEnvelope onClick={openMail} className='icon' />
-          </IconContainer>
+          <ContactIcons />
           <Button onClick={handleProjects}>See My Work</Button>
         </LeftContainer>
         <ImgContainer>

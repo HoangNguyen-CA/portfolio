@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 import SectionLayout from '../components/Section/SectionLayout';
 import Button from '../components/Button';
+import ContactIcons from '../components/ContactIcons';
 
 const Layout = styled(SectionLayout)`
   background-color: ${({ theme }) => theme.bg.main};
@@ -65,11 +66,19 @@ const Form = styled.form`
   }
 `;
 
+const Icons = styled(ContactIcons)`
+  display: flex;
+  justify-content: center;
+  margin: 1.6em 0 1em 0;
+  font-size: 0.9rem;
+`;
+
 const Contact = () => {
   return (
     <Layout header='Contact' name='contactSection'>
       <Form name='contact' method='post'>
         <input type='hidden' name='form-name' value='contact' />
+        <Icons />
 
         <Label>
           Email:
