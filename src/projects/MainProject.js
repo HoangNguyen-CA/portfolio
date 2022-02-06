@@ -100,6 +100,7 @@ const MainProject = ({
   tags = [],
   codeLink,
   demoLink,
+  heroku,
 }) => {
   const imageNode = (
     <ImgContainer reversed={reversed}>
@@ -116,7 +117,9 @@ const MainProject = ({
       <Desc>{desc}</Desc>
       <ButtonContainer>
         <Button onClick={openNewPage(codeLink)}>Code</Button>
-        <Button onClick={openNewPage(demoLink)}>Demo (Heroku)</Button>
+        <Button onClick={openNewPage(demoLink)}>
+          Demo {heroku ? '(Heroku)' : ''}
+        </Button>
       </ButtonContainer>
     </Inner>
   );

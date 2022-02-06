@@ -12,7 +12,7 @@ const Layout = styled(SectionLayout)`
 
 const MainProjects = () => {
   return (
-    <Layout header='Full Stack Projects' name='mainProjects'>
+    <Layout header='Projects' name='mainProjects'>
       {MainProjectItems}
     </Layout>
   );

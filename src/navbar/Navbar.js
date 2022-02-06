@@ -4,6 +4,7 @@ import Navlinks from './Navlinks';
 
 import SectionInner from '../components/Section/SectionInner';
 import { Link } from 'react-scroll';
+import { ReactComponent as LogoSVG } from '../images/hn_logo.svg';
 
 const activeStyles = css`
   background-color: ${({ theme }) => theme.clr.primary[100]};
@@ -30,16 +31,20 @@ const Inner = styled(SectionInner)`
   max-width: ${({ theme }) => theme.maxWidth};
 `;
 
-const Logo = styled(Link).attrs((props) => ({
+const LogoContainer = styled(Link).attrs((props) => ({
   activeClass: '',
   to: 'cover',
   smooth: true,
   duration: 1000,
 }))`
   color: ${({ theme }) => theme.clr.primary[900]};
-  font-size: 1.7rem;
-  font-weight: 700;
   cursor: pointer;
+`;
+
+const Logo = styled(LogoSVG)`
+  width: 40px;
+  height: auto;
+  fill: ${({ theme }) => theme.clr.primary[700]};
 `;
 
 const Navbar = () => {
@@ -64,7 +69,10 @@ const Navbar = () => {
   return (
     <Container ref={navRef} $active={active}>
       <Inner paddingy='0' gap='0'>
-        <Logo>HN</Logo>
+        <LogoContainer>
+          <Logo></Logo>
+        </LogoContainer>
+
         <Navlinks />
       </Inner>
     </Container>

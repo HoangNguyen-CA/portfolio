@@ -3,6 +3,7 @@ import SmallProject from './SmallProject';
 
 import recipeAppImage from '../images/projects/recipe.png';
 import socialMediaAppImage from '../images/projects/social-media.png';
+import nextjsBlog from '../images/projects/nextjs-blog.png';
 
 import fyloLandingImage from '../images/projects/fylo-landing-page.jpg';
 import fyloStorageImage from '../images/projects/fylo-storage-component.jpg';
@@ -10,6 +11,14 @@ import calculatorImage from '../images/projects/calculator.jpg';
 import shortlyImage from '../images/projects/shortly.jpg';
 
 const MainProjectsList = [
+  {
+    header: 'Next.js Blog',
+    image: nextjsBlog,
+    tags: ['Next.js', 'Static Site Generation', 'Headless CMS'],
+    desc: `A blog created using the Next.js framework. Pages are converted into static files at build time to improve SEO and load speeds. Content is managed by Contentful Headless CMS. `,
+    demoLink: 'https://hoangnguyen-blog.vercel.app/',
+    codeLink: 'https://github.com/HoangNguyen-CA/personal-blog',
+  },
   {
     header: 'Social Media App',
     image: socialMediaAppImage,
@@ -25,6 +34,7 @@ const MainProjectsList = [
     desc: `An application made to mimic Twitter; only the design was taken from Twitter. Backend and frontend code was written entirely from scratch. The app has features you would expect from a social-media site including user authentication/authorization and CRUD operations. The code is written with maintainability in mind since this will be a long-term project. The app utilizes React Testing Library for unit and integration tests.`,
     demoLink: 'https://hoang-nguyen-twitter.herokuapp.com/',
     codeLink: 'https://github.com/HoangNguyen-CA/social-media-app',
+    heroku: true,
   },
   {
     header: 'Recipe App',
@@ -41,6 +51,7 @@ const MainProjectsList = [
     desc: 'An application that uses a third-party API to fetch information about recipes. The frontend uses form generation & validation made from scratch. User authentication/authorization is implemented using json web tokens. Users can save favorite recipes for future reference.',
     demoLink: 'https://hoangnguyen-recipe-app.herokuapp.com/',
     codeLink: 'https://github.com/HoangNguyen-CA/cooking-recipe-app',
+    heroku: true,
   },
 ];
 
