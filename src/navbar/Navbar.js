@@ -42,9 +42,9 @@ const LogoContainer = styled(Link).attrs((props) => ({
 `;
 
 const Logo = styled(LogoSVG)`
-  width: 40px;
+  width: 45px;
   height: auto;
-  fill: ${({ theme }) => theme.clr.primary[700]};
+  fill: ${({ theme }) => theme.clr.primary[900]};
 `;
 
 const Navbar = () => {
