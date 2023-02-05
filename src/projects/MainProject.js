@@ -1,9 +1,9 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React from "react";
+import styled, { css } from "styled-components";
 
-import { openNewPage } from '../utils';
+import { openNewPage } from "../utils";
 
-import Button from '../components/Button';
+import Button from "../components/Button";
 
 const Container = styled.div`
   display: flex;
@@ -95,8 +95,8 @@ const Tag = styled.p`
 const MainProject = ({
   image,
   reversed,
-  header = 'Project',
-  desc = 'This is my project.',
+  header = "Project",
+  desc = "This is my project.",
   tags = [],
   codeLink,
   demoLink,
@@ -104,7 +104,7 @@ const MainProject = ({
 }) => {
   const imageNode = (
     <ImgContainer reversed={reversed}>
-      <img src={image} alt='project' width='1920' height='1080' />
+      <img src={image} alt="project" width="1920" height="1080" />
     </ImgContainer>
   );
 
@@ -117,9 +117,11 @@ const MainProject = ({
       <Desc>{desc}</Desc>
       <ButtonContainer>
         <Button onClick={openNewPage(codeLink)}>Code</Button>
-        <Button onClick={openNewPage(demoLink)}>
-          Demo {heroku ? '(Heroku)' : ''}
-        </Button>
+        {demoLink && (
+          <Button onClick={openNewPage(demoLink)}>
+            Demo {heroku ? "(Heroku)" : ""}
+          </Button>
+        )}
       </ButtonContainer>
     </Inner>
   );
