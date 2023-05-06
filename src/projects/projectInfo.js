@@ -26,7 +26,7 @@ const MainProjectsList = [
     ],
     desc: "A full-stack app that uses OpenAI's image generation API to create images from a given text prompt. Users are authenticated using Auth0 and can save generated images for future reference. The backend infrastructure is hosted using AWS services (S3, EC2, Route53, RDS) and the frontend SPA is hosted on netlify.",
     demoLink: "https://hnca-ai-image-generator.netlify.app/",
-    codeLink: "https://github.com/HoangNguyen-CA/ai-image-generator-server",
+    codeLink: "https://github.com/HoangNguyen-CA/ai-image-generator",
   },
   {
     header: "Next.js Blog",
